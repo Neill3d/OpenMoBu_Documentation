@@ -4,7 +4,7 @@ hidden: true
 
 # Spring box
 
-A box for relation constraint ![This is an image](../../../springbox.jpg)
+A box for relation constraint ![This is an image](../../plugins/springbox.jpg)
 
 Spring box math based on fundamental formule F = -kx
 
