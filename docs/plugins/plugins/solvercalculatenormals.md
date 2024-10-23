@@ -36,13 +36,13 @@ It does not take into account any smoothing group or hard edge threshold informa
 
 *   Locate a solver in the assets browser in solvers category
 
-    ![assets](../../Plugins/solver\_normals\_assets.jpg)
+    ![assets](../../plugins/solver_normals_assets.jpg)
 * Add solver into the scene
-* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../../Plugins/solver\_normals\_props.jpg)
+* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../../plugins/solver_normals_props.jpg)
 
 ### Test Scenes
 
-[FBX Scene with Deformable mesh and the solver](../../../MB\_Scenes/solver\_CalculateNormals.fbx)
+[FBX Scene with Deformable mesh and the solver](../../../MB\_Scenes/solver_CalculateNormals.fbx)
 
 ### Videos
 
