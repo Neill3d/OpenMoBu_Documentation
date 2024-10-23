@@ -4,7 +4,7 @@ Plugin for setup active zone for optical cameras
 
 A user object that calculates the optical capture volume score by providing a capture space and cameras with defined fields of view and far distances. The score is calculated based on the points within the capture space that are visible to at least two cameras.
 
-![opticalVolumeCalculator](../../Plugins/VolumeCalculator\_volume.jpg)
+![opticalVolumeCalculator](../../plugins/VolumeCalculator_volume.jpg)
 
 ## Work with the plugin
 
@@ -12,7 +12,7 @@ Place the cameras with real optical parameters (FOV) in the scene. Add the Volum
 
 ## Model Properties
 
-![opticalVolumeProperties](../../Plugins/VolumeCalculator\_properties.jpg)
+![opticalVolumeProperties](../../plugins/VolumeCalculator_properties.jpg)
 
 * Length – lenght of the room (1 unit – 1cm)
 * Width – width of the room (1 unit – 1cm)
@@ -46,7 +46,7 @@ Resolution 640×480
 * The display of the active zone on the room's floor and its parameters are for reference only and are not part of the actual active zone calculation by the plug-in. This display should be used as an aid to understand the calculation results and active zone marking.
 * Avoid making the calculation step too small. A large number of points can consume a lot of resources and may cause the program to crash.
 * The marker can be used to rate the active zone, move it, and observe the projection rays from the cameras.
-* For ease of use, you can set up a double window in the MotionBuilder viewer. In one view, you can display the camera feed, and in the other, a perspective view of the room. The active zone display should be enabled only for the current camera you're working with. To simplify this process, there is an additional 'Switch to Camera' button. This button switches the first view to the selected camera and activates the display of the active zone for that camera only. ![volumeCalculateInWork](../../Plugins/VolumeCalculator\_inwork.jpg)
+* For ease of use, you can set up a double window in the MotionBuilder viewer. In one view, you can display the camera feed, and in the other, a perspective view of the room. The active zone display should be enabled only for the current camera you're working with. To simplify this process, there is an additional 'Switch to Camera' button. This button switches the first view to the selected camera and activates the display of the active zone for that camera only. ![volumeCalculateInWork](../../plugins/VolumeCalculator_inwork.jpg)
 
 Examples of capture volume setups could be found in the MB\_Scenes/OpticalVolumeCalculator folder
 
