@@ -2,7 +2,7 @@
 
 It's a part of OpenMoBu project and could be found in OpenMoBu repository on Github
 
-The plugin that applies post effects in your viewport window [![MoPlugs](https://github.com/Neill3d/MoBu/blob/master/Documentation/Images/Bryan\_usecase.jpg)](postprocessingeffects.md)&#x20;
+The plugin that applies post effects in your viewport window [![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](postprocessingeffects.md)&#x20;
 
 List of available effects:
 
@@ -22,11 +22,11 @@ The effects could be applied only in a camera view.
 
 In order to apply effects, you have to create a post process user object which contains all properties. You can do that from Assets Browser or from the Post Process Tool. In Assets Browser the user object is located in `Assets / Templates / Shading Elements`
 
-The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../../../post\_process\_asset.jpg)
+The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../../plugins/post_process_asset.jpg)
 
-Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../../../post\_process\_user\_object.jpg)
+Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../../plugins/post_process_user_object.jpg)
 
-Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../../../post\_process\_user\_object\_properties.jpg)
+Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../../plugins/post_process_user_object_properties.jpg)
 
 Here you can active the desired effects and the whole effect system in order to see the result in real-time in the viewport.
 
@@ -46,7 +46,7 @@ Name of a configuration file is `< PC Name >.PostProcessing.txt`
 
 ## Python tool to tweak post effects properties.
 
-PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../../../post\_process\_tool.jpg)
+PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../../plugins/post_process_tool.jpg)
 
 ## Effects Common Notes
 
