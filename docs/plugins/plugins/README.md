@@ -63,7 +63,7 @@ Shading, fx, geometry preparation for rendering
 
 A special user object, that helps to add post process effects on top of your camera view.
 
-[![MoPlugs](https://github.com/Neill3d/MoBu/blob/master/Documentation/Images/Bryan\_usecase.jpg)](../../)
+[![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](../../)
 
 [Read More...](postprocessingeffects.md)
 
@@ -75,7 +75,7 @@ This is an advance version of Dynamic Lighting Shader with features like vertex 
 
 ### Renderer Colors
 
-A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../../Plugins/renderer\_colors\_normalized.jpg)
+A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../../plugins/renderer_colors_normalized.jpg)
 
 ### Texture
 
@@ -117,7 +117,7 @@ Tools, custom objects in the scene
 
 ### BlendShape Toolkit
 
-![blendshapeToolkit](../../Plugins/tool\_sculpt\_brush.jpg)
+![blendshapeToolkit](../../plugins/tool_sculpt_brush.jpg)
 
 * Blendshape manager - to manage the given model blendshapes, plus additional functionality to add/remove/duplicate, save/load from file, do a snapshot
 * Blenshape Sculpt - use brushes to create or modify a blendshape. it can be useful for making correction blendshapes on fly, as you can sculpt on top of current deformed mesh and it will generate a correspondent correction blendshape
