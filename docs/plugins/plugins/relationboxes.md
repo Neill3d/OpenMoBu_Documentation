@@ -1,10 +1,14 @@
 # Relation Constraint Boxes
 
+## Videos
+
+[Relation Constraint Boxes](https://youtu.be/y5Q5o2iBE9A)
+
 ## Comet's PoseReader relation box
 
 Rigging for correction joints
 
-![PoseReaderBox](../../plugins/relationBox_PoseReader.jpg)
+![PoseReaderBox](../relationBox\_PoseReader.jpg)
 
 Category - OpenMobu
 
@@ -24,7 +28,7 @@ You can create poses for an object that internally store the transformation matr
 
 It supports up to 6 poses, which can be defined in the relation box properties (accessible in the property view of the selected relation box).
 
-![PoseTransformBox](../../plugins/box_poseTransform.jpg)
+![PoseTransformBox](../box\_poseTransform.jpg)
 
 Category - OpenMobu
 
@@ -34,7 +38,7 @@ Category - OpenMobu
 
 Calculate a rotation to look at a given target point. This is similar to an Aim constraint, but in this case, it's presented in the form of a relation box.
 
-![LookRotationBox](../../plugins/relationBox_LookRotation.jpg)
+![LookRotationBox](../relationBox\_LookRotation.jpg)
 
 Category - OpenMobu
 
@@ -44,7 +48,7 @@ Category - OpenMobu
 
 Calculate the intersection point between a ray and a mesh.
 
-![RayIntersectBox](../../plugins/relationBox_RayIntersect.jpg)
+![RayIntersectBox](../relationBox\_RayIntersect.jpg)
 
 Category - OpenMobu
 
@@ -52,7 +56,7 @@ Category - OpenMobu
 
 ## Quaternion math boxes
 
-![QuaternionBoxes](../../plugins/relationBox_quaternionMath.jpg)
+![QuaternionBoxes](../relationBox\_quaternionMath.jpg)
 
 Boxes Category - Quaternion
 
@@ -76,7 +80,7 @@ List of boxes:
 
 RBFs are particularly efficient for **multidimensional interpolation**, which is perfect for rigging systems that need to handle multiple influencing joints. For example, if the orientation of a joint depends on multiple axes (like bending and twisting), RBFs handle the blending of these orientations smoothly.
 
-![RBFBox](../../plugins/relationBox_RBF.jpg)
+![RBFBox](../relationBox\_RBF.jpg)
 
 Category - OpenMobu
 
@@ -92,10 +96,10 @@ In the `@openmobu.txt` configuration file, there is a property called **Box RBF*
 Box Properties:
 
 * Function Type - Gaussian, Multiquadratic, Inverse Multiquadratic. defines the way of weight distribution.
-* Height&#x20;
+* Height
   * The **height** parameter controls the **amplitude** or **influence strength** of the RBF at the center of the radial function. It determines how strongly the RBF affects the interpolation at the point where the distance from the center is zero.
   * In simple terms, **height** defines the peak value of the function. A higher height means the RBF has a stronger influence in its immediate vicinity.
-* Sigma&#x20;
+* Sigma
   * The **sigma** parameter controls the **spread** or **width** of the RBF. It determines how quickly the influence of the RBF decays as you move away from the center.
   * A smaller sigma value makes the RBF more concentrated around its center, meaning the influence drops off sharply as you move away. A larger sigma value creates a more gradual influence over a wider area.
 * Rotation Multiply - apply the multiplier to scale down targets
@@ -106,27 +110,27 @@ Box Properties:
 
 Convert Euler rotation into spherical coordinates. This way, we can avoid the gimbal lock effect in rotations and establish relationships based on polar coordinates on the surface of a sphere. This approach could be a great fit for rigging correction joints.
 
-![SphereCoordsBox](../../plugins/relationBox_sphereCoords.jpg)
+![SphereCoordsBox](../relationBox\_sphereCoords.jpg)
 
 Category - OpenMobu
 
-[Sample scene - relationBox\_SphereCoords.fbx](../../../MB\_Scenes/relationBox_SphereCoords.fbx)
+[Sample scene - relationBox\_SphereCoords.fbx](../../../MB\_Scenes/relationBox\_SphereCoords.fbx)
 
-[Sample scene - relationBox\_SphereCoords\_ExtractRotationXZ.fbx](../../../MB\_Scenes/relationBox\_SphereCoords_ExtractRotationXZ.fbx)
+[Sample scene - relationBox\_SphereCoords\_ExtractRotationXZ.fbx](../../../MB\_Scenes/relationBox\_SphereCoords\_ExtractRotationXZ.fbx)
 
 ## Spring Box
 
 spring dynamics, secondary motion
 
-A box for relation constraint ![This is an image](../../plugins/springbox.jpg)
+A box for relation constraint ![This is an image](../springbox.jpg)
 
 Spring box math based on fundamental formule F = -kx
 
 [A short demo video on Youtube](http://youtu.be/rAToQEmg\_LY)
 
-[Sample scene - relationBox\_Spring.fbx](../../../MB\_Scenes/relationBox_Spring.fbx)
+[Sample scene - relationBox\_Spring.fbx](../../../MB\_Scenes/relationBox\_Spring.fbx)
 
-[Sample scene - relationBox\_SpringAndCamera.fbx](../../../MB\_Scenes/relationBox_SpringAndCamera.fbx)
+[Sample scene - relationBox\_SpringAndCamera.fbx](../../../MB\_Scenes/relationBox\_SpringAndCamera.fbx)
 
 | Parameter  | Description                                                                                                                                                                                                                                                                     | Default Value |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
