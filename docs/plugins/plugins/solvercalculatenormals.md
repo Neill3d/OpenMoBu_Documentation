@@ -12,13 +12,13 @@ MotionBuilder loads models with vertex normal information used for lighting. The
 
 <summary>More examples</summary>
 
-![](<../../.gitbook/assets/image (1) (1) (1).png>)
+<img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="original">
 
-![](<../../.gitbook/assets/normals\_solver\_01 (1).jpg>)
+<img src="../../.gitbook/assets/normals_solver_01 (1).jpg" alt="" data-size="original">
 
-![](../../.gitbook/assets/normals\_solver\_02.jpg)
+<img src="../../.gitbook/assets/normals_solver_02.jpg" alt="" data-size="original">
 
-![](../../.gitbook/assets/normals\_solver\_03.jpg)
+<img src="../../.gitbook/assets/normals_solver_03.jpg" alt="" data-size="original">
 
 </details>
 
@@ -36,15 +36,15 @@ It does not take into account any smoothing group or hard edge threshold informa
 
 *   Locate a solver in the assets browser in solvers category
 
-    ![assets](../../plugins/solver_normals_assets.jpg)
+    ![assets](../solver_normals_assets.jpg)
 * Add solver into the scene
-* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../../plugins/solver_normals_props.jpg)
+* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../solver_normals_props.jpg)
 
 ### Test Scenes
 
-[FBX Scene with Deformable mesh and the solver](../../../MB\_Scenes/solver_CalculateNormals.fbx)
+[FBX Scene with Deformable mesh and the solver](../../../MB_Scenes/solver_CalculateNormals.fbx)
 
 ### Videos
 
-* [first release](https://youtu.be/QYUpd1u6O\_o?si=WzmfQbCdII8WR1oB)
+* [first release](https://youtu.be/QYUpd1u6O_o?si=WzmfQbCdII8WR1oB)
 * [first release WIP](https://youtu.be/YFLuMV-uGR8?si=pcvfAaf7Vm51x6vB)
