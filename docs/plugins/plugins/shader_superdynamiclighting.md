@@ -112,6 +112,20 @@ Fog in global light settings also has an influence on the shading, so you can us
 
 [Video on Youtube](https://youtu.be/ILbo5VWHVTE?si=0_cpQJcIU0AALap6)
 
+
+
+## What is MatCap
+
+**MatCap** (short for **"Material Capture"**) is a shading technique commonly used in 3D rendering to create fast and visually appealing materials by mapping lighting and material properties directly from a texture.
+
+In order to use MatCap shading you have to import such matcap image and assign it as input for MatCap texture in the shader properties. Plus you have to put "Use MatCap" property to true.
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>example on how matcap texture looks like</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
 ## Where to get matcap images ?
 
 [Here is a huge collection of matcaps on github repository](https://github.com/nidorx/matcaps)
