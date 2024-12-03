@@ -37,7 +37,7 @@ A set of plugins that constains source object(s) with a destination object(s) wi
 
 * [Attachment Constraint](attachmentconstraint.md)
 * [Driven Property Constraint](drivenpropertyconstraint.md)
-* [Twist Extraction Constraint](constraint\_twistextraction.md)
+* [Twist Extraction Constraint](constraint_twistextraction.md)
 
 ## Devices
 
@@ -45,15 +45,15 @@ A plugin which handle some external Input/Output with real-time data flow and no
 
 ### OSC Facial Device (FaceCap)
 
-<img src="../../.gitbook/assets/image (1).png" alt="" data-size="line"> A device plugin for live streaming via OSC from FaceCap iPhone App For more information, please visit [FaceCap official website](https://bannaflak.com/face-cap/index.html)
+<img src="../../.gitbook/assets/image (1) (2).png" alt="" data-size="line"> A device plugin for live streaming via OSC from FaceCap iPhone App For more information, please visit [FaceCap official website](https://bannaflak.com/face-cap/index.html)
 
-<img src="../../.gitbook/assets/image.png" alt="" data-size="line"> In additional, there is a way to redirect packets from LiveLink Face App int o OSC packets by runing a python based service - [https://github.com/Neill3d/PyLiveLinkFace](https://github.com/Neill3d/PyLiveLinkFace)
+<img src="../../.gitbook/assets/image (4).png" alt="" data-size="line"> In additional, there is a way to redirect packets from LiveLink Face App int o OSC packets by runing a python based service - [https://github.com/Neill3d/PyLiveLinkFace](https://github.com/Neill3d/PyLiveLinkFace)
 
 ## View Manipulators
 
 A plugin that hooks into user input operations within the viewport to perform actions in the scene, such as transforming objects by dragging the manipulator handles using mouse input.
 
-[Lock Camera Manipulator](manipulator\_lockcamera.md)
+[Lock Camera Manipulator](manipulator_lockcamera.md)
 
 ## Graphics
 
@@ -71,11 +71,11 @@ A special user object, that helps to add post process effects on top of your cam
 
 This is an advance version of Dynamic Lighting Shader with features like vertex displacement, specular map, MatCap shading, etc.
 
-[Read More...](shader\_superdynamiclighting.md)
+[Read More...](shader_superdynamiclighting.md)
 
 ### Renderer Colors
 
-A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../../plugins/renderer_colors_normalized.jpg)
+A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../renderer_colors_normalized.jpg)
 
 ### Texture
 
@@ -117,7 +117,7 @@ Tools, custom objects in the scene
 
 ### BlendShape Toolkit
 
-![blendshapeToolkit](../../plugins/tool_sculpt_brush.jpg)
+![blendshapeToolkit](../tool_sculpt_brush.jpg)
 
 * Blendshape manager - to manage the given model blendshapes, plus additional functionality to add/remove/duplicate, save/load from file, do a snapshot
 * Blenshape Sculpt - use brushes to create or modify a blendshape. it can be useful for making correction blendshapes on fly, as you can sculpt on top of current deformed mesh and it will generate a correspondent correction blendshape

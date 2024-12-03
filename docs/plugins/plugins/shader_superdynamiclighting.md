@@ -35,7 +35,7 @@ Supported specular reflections. The selection is defined by a material custom pr
 * Phong
 *   Anisotropic
 
-    <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>anisotropic specular reflection</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>anisotropic specular reflection</p></figcaption></figure>
 *   Cook Torrance (with a given specular map where R channel describes the roughness, it's a good fit for a skin surface specular reflections)&#x20;
 
     <figure><img src="../../.gitbook/assets/metahuman_face_test2.jpg" alt=""><figcaption></figcaption></figure>
@@ -66,6 +66,20 @@ On a shader side we have parameters
 Each light has "**cast shadows**" flag to toggle shadow casting individually.
 
 Each model has flags for **Casts Shadows** and **Receive Shadows** which are connected to a correspondent logic inside the shader.
+
+### Infinite light shadow map
+
+Infinite light shadow uses the whole scene bounding box as a default frustum area to render into a shadow map. With a big complex scene that could lead to a shadow quality degradation.&#x20;
+
+There is a way to define a custom bounding box for a shadow rendering. To do so you have to define an object or set of objects which bounding box you would like to use.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>example of infinite light shadow bounding box</p></figcaption></figure>
+
+Then attach these objects into a "Shadow Bounding Box" custom light property
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>custom object property and defined model to be used as bounding box area for shadow</p></figcaption></figure>
+
+
 
 ### Custom Properties
 
