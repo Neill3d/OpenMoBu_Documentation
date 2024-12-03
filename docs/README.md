@@ -17,6 +17,8 @@ layout:
 
 [OpenMobu Github repository](https://github.com/Neill3d/OpenMoBu)
 
+{% embed url="https://docs.google.com/presentation/d/1SPKWOPz2XTN8as_XAnwQe08gTCLTpTWX5BWet7z0_ro/edit?usp=sharing" %}
+
 ## Introduction Videos
 
 {% embed url="https://www.youtube.com/live/sgzunIbNcp4?si=kTXzdfnZ3FnkiIdv" %}
