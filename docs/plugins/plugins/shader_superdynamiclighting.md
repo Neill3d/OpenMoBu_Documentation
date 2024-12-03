@@ -95,6 +95,7 @@ Then attach these objects into a "Shadow Bounding Box" custom light property
 
 * **Magnitude** - Number, defines the light influence radius
 * **Cast Specular On Object** - bool, defines either light have to contribute to a specular term
+* Shadow Bounding Box - list of objects, to define a custom bounding box area for an infinite frustum when we do render objects into a shadow map
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
