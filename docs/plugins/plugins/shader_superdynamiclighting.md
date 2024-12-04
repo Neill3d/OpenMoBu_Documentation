@@ -25,17 +25,51 @@ The shader is taking in a count texture transformation as well for channels: dif
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Texture transformation in a texture layout</p></figcaption></figure>
 
+### Shader Navigator Layout
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>navigator layout view of super dynamic lighting shader</p></figcaption></figure>
+
+### Shader Properties
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>properties view of super dynamic lighting shader</p></figcaption></figure>
+
+| Property              | Value                    | Description                                                                                         |
+| --------------------- | ------------------------ | --------------------------------------------------------------------------------------------------- |
+| Reload Shaders        | Action                   | a development button, to trigger an internal glsl shaders reload                                    |
+| Use Scene Lights      | boolean                  | switch between global list of scene lights and local list of affected lights in the shader          |
+| AffectingLights       | List of lights           | defines which lights should be used for the shader. That the option required for the shadow mapping |
+| Transparency          | Enum alpha mode          | defines a more of transparency                                                                      |
+| TransparencyFactor    | Number                   | multiplier of transparency                                                                          |
+| Shadows               | boolean                  | a toggle to use shadow maps                                                                         |
+| ShadowMapSize         | Number                   | defines a map of shadow map. It's prefered to have it power of two (1024, 2048, 4096)               |
+| ShadowCasters         | List of models           | list of models to be used as shadow casters. That is a requirement for the shadow mapping.          |
+| Offset Factor         | Number                   | for shadow map rendering, multiplies the max depth slope of the polygon                             |
+| Offset Units          | Number                   | fr shadow map rendering, a fixed const offset in depth units for all polygons                       |
+| Switch Albedo to sRGB | Boolean                  | switch between sRGB and linear color space, a gamma correction for used material textures           |
+| Force Update Textures | Boolean                  | update on gpu for the used material textures every frame                                            |
+| Use Rim Lighting      | Boolean                  | emulation of back lighting                                                                          |
+| Rim Power             | Number                   | back lighting power                                                                                 |
+| Rim Color             | Color                    | back lighting color                                                                                 |
+| Use MatCap            | Boolean                  | use a Material Capture texture, see a correspondent section in the documentation                    |
+| MatCap                | texture object reference | a reference to a texture object                                                                     |
+
+
+
 ### Shading
 
-Supported diffuse shading. The selection is defined by a material custom property (see a correspondent documentation section)
+{% hint style="info" %}
+The selection is defined by a material custom property (see a custom properties section)
+{% endhint %}
+
+Supported diffuse shading:
 
 * Lambert
 * Oren-Nayar (more diffused light destribution, better fit for a character skin surface)
 
-Supported specular reflections. The selection is defined by a material custom property (see a correspondent documentation section)
+Supported specular reflections:
 
-* Phong
-*   Anisotropic
+* Phong (material like plastic)
+*   Anisotropic (material like brushed metal)
 
     <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>anisotropic specular reflection</p></figcaption></figure>
 *   Cook Torrance (with a given specular map where R channel describes the roughness, it's a good fit for a skin surface specular reflections)&#x20;
