@@ -2,6 +2,8 @@
 
 This is an advanced version of the Dynamic Lighting Shader.
 
+{% embed url="https://youtu.be/mdfkya7F8ZQ" %}
+
 Additional features:
 
 * Supported Texture channels and their transformations: diffuse, transparency, specular, reflection, displacement, and normal map
