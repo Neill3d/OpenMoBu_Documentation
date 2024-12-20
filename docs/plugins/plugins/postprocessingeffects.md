@@ -1,20 +1,22 @@
 # Post Processing Effects
 
-It's a part of OpenMoBu project and could be found in OpenMoBu repository on Github
+The plugin that applies post effects in your viewport window [![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](postprocessingeffects.md)
 
-The plugin that applies post effects in your viewport window [![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](postprocessingeffects.md)&#x20;
+List of build-in effects:
 
-List of available effects:
+| Effect                                | Before | Applied |
+| ------------------------------------- | ------ | ------- |
+| Color Correction                      |        |         |
+| Displacement                          |        |         |
+| Depth of Field (DOF)                  |        |         |
+| Film Grain                            |        |         |
+| Fish Eye                              |        |         |
+| Lens Flare                            |        |         |
+| Motion Blur (Camera)                  |        |         |
+| Screen Space Ambient Occlusion (SSAO) |        |         |
+| Vignetting                            |        |         |
 
-* Color correction
-* Displacement
-* Depth of Field (DOF)
-* Film Grain
-* Fish Eye
-* Lens Flare
-* Motion Blur
-* Screen Space Ambient Occlusion (SSAO)
-* Vignetting
+
 
 ## How To Start
 
@@ -22,11 +24,11 @@ The effects could be applied only in a camera view.
 
 In order to apply effects, you have to create a post process user object which contains all properties. You can do that from Assets Browser or from the Post Process Tool. In Assets Browser the user object is located in `Assets / Templates / Shading Elements`
 
-The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../../plugins/post_process_asset.jpg)
+The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../post_process_asset.jpg)
 
-Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../../plugins/post_process_user_object.jpg)
+Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../post_process_user_object.jpg)
 
-Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../../plugins/post_process_user_object_properties.jpg)
+Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../post_process_user_object_properties.jpg)
 
 Here you can active the desired effects and the whole effect system in order to see the result in real-time in the viewport.
 
@@ -46,12 +48,12 @@ Name of a configuration file is `< PC Name >.PostProcessing.txt`
 
 ## Python tool to tweak post effects properties.
 
-PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../../plugins/post_process_tool.jpg)
+PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../post_process_tool.jpg)
 
 ## Effects Common Notes
 
 * DOF and SSAO and any other effect which is using depth buffer could be sensible to camera near/far planes
-* GLSL Shader stores value in single float, so please take care about too big values for the far plane
+* GLSL Shader stores value in single float, so please take care about too big values for the camera far plane
 
 ## DOF
 
@@ -73,13 +75,14 @@ The post effects modify the final image, where HUD elements are draw as part of 
 
 ## Additional features of the plugin
 
-* stream view image via UDP socket (used for virtual camera communication), was designed for a Google Tango tablet - [Introduction To Virtual Camera](https://www.youtube.com/watch?v=WpLeU2rrf\_Y)
+* stream view image via UDP socket (used for virtual camera communication), was designed for a Google Tango tablet - [Introduction To Virtual Camera](https://www.youtube.com/watch?v=WpLeU2rrf_Y)
 * trigger evaluation of Python Script devices during rendering. That feature is always enabled and it helps to trigger Embedded Python Scripts while running an offline rendering.
 
 ## Videos about the plugin:
 
+* [Concept of masks](https://youtu.be/1jXuYI_jriY)
 * [Introduction Video from a live stream](https://www.youtube.com/watch?v=sgzunIbNcp4\&t=4887s)
-* [Update with new features from 2020](https://youtu.be/AOKk90\_bzX4)
+* [Update with new features from 2020](https://youtu.be/AOKk90_bzX4)
 
 ## Developer Guide
 
@@ -91,10 +94,16 @@ The plugin third party dependencies
 * bzip2
 * libpng
 * zlib
+* ImGui
 
 All library binaries for windows x64 are included in the project folder.
 
 ## LOG
+
+21.11.2024
+
+* added masking functionality
+* lens flare 3d object occlusion
 
 ### 17.09.2019
 
