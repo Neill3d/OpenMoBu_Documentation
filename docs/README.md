@@ -49,8 +49,15 @@ layout:
 
 ## About the project
 
-Sergei (Neill3d) Solokhin
+Sergei (Neill3d) Solokhin, email to: neill 3 d at gmail.
 
-Special thanks to Les Androids Associes.
+[Community Discord Server](https://discord.gg/EU5E2p9VCf)
 
 [Support the project](https://ko-fi.com/neill3d)
+
+{% hint style="info" %}
+The biggest part of the project was developed during my work for [Les Androids Associes](https://www.androids.fr/).
+
+A huge thanks to them for making the project open source and for their support. They're also great guys!
+{% endhint %}
+

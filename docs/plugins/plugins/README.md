@@ -65,7 +65,7 @@ A special user object, that helps to add post process effects on top of your cam
 
 [![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](../../)
 
-[Read More...](postprocessingeffects.md)
+[Read More...](postprocessingeffects/)
 
 ### Super Dynamic Lighting Shader
 
