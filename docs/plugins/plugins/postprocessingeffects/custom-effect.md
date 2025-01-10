@@ -1,5 +1,9 @@
 # Custom Effect
 
+{% hint style="warning" %}
+Work in progress, the feature is not part of main branch!
+{% endhint %}
+
 Custom effect gives you a way to make a new effect for the post processing system. The effect is based on fragment glsl shaders.
 
 {% hint style="info" %}
