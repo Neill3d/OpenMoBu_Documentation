@@ -58,6 +58,6 @@ Sergei (Neill3d) Solokhin, email to: neill 3 d at gmail.
 {% hint style="info" %}
 The biggest part of the project was developed during my work for [Les Androids Associes](https://www.androids.fr/).
 
-A huge thanks to them for making the project open source and for their support. They're also great guys!
+A huge thanks to them for making the project open source and for their support. They're great and talented guys!
 {% endhint %}
 
