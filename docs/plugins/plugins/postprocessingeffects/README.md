@@ -2,19 +2,25 @@
 
 The plugin that applies post effects in your viewport window [![MoPlugs](../../../../Documentation/Images/Bryan_usecase.jpg)](./)
 
-List of build-in effects:
+## Effects
 
-| Effect                                | Before | Applied |
-| ------------------------------------- | ------ | ------- |
-| Color Correction                      |        |         |
-| Displacement                          |        |         |
-| Depth of Field (DOF)                  |        |         |
-| Film Grain                            |        |         |
-| Fish Eye                              |        |         |
-| Lens Flare                            |        |         |
-| Motion Blur (Camera)                  |        |         |
-| Screen Space Ambient Occlusion (SSAO) |        |         |
-| Vignetting                            |        |         |
+Here is an original test scene, that I'm going to apply build-in effects one by one
+
+<figure><img src="../../../.gitbook/assets/effects_ssao_no_effect.jpg" alt="" width="375"><figcaption></figcaption></figure>
+
+
+
+| Effect                                | image                                                                 | Description                                                                                                                                                             |
+| ------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Color Correction                      | ![](../../../.gitbook/assets/effects_colorcorrection_with_effect.jpg) | <ul><li>Tweak image contrast, brightness, gamma </li><li>Invert the image colors</li><li>Hue and saturation</li><li>Chromatic abberation</li><li>Bloom effect</li></ul> |
+| Displacement                          | ![](../../../.gitbook/assets/effects_displacement_with_effect.jpg)    | an animated wave distortion effect                                                                                                                                      |
+| Depth of Field (DOF)                  | ![](../../../.gitbook/assets/effects_dof_with_effect.jpg)             | A depth of field effect                                                                                                                                                 |
+| Film Grain                            | ![](../../../.gitbook/assets/effects_filmgrain_with_effect.jpg)       | Animated film grain effect                                                                                                                                              |
+| Fish Eye                              | ![](../../../.gitbook/assets/effects_fisheye_with_effect.jpg)         | Fish eye distortion of the image                                                                                                                                        |
+| Lens Flare                            | ![](../../../.gitbook/assets/effects_lensflare_with_effect.jpg)       | Lens flare with a possibility to connect 3d scene lights as a source position for the effect. There is an additional feature of 3d occlusion for the effect.            |
+| Motion Blur (Camera)                  | ![](../../../.gitbook/assets/effects_motionblur_with_effect.jpg)      | Based on previous and current camera transforms, blur based on a camera movement                                                                                        |
+| Screen Space Ambient Occlusion (SSAO) | ![](../../../.gitbook/assets/effects_ssao_with_effect.jpg)            | micro shadowing                                                                                                                                                         |
+| Vignetting                            | ![](../../../.gitbook/assets/effects_vigneting_with_effect.jpg)       | a vignetting effect                                                                                                                                                     |
 
 {% content-ref url="custom-effect.md" %}
 [custom-effect.md](custom-effect.md)
@@ -59,9 +65,11 @@ PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTo
 * DOF and SSAO and any other effect which is using depth buffer could be sensible to camera near/far planes
 * GLSL Shader stores value in single float precision, so please take care about too big values for the camera far plane
 
-## DOF
+### DOF
 
 In DOF Effect you can manually specify a focal distance.
+
+<figure><img src="../../../.gitbook/assets/dof_properties.jpg" alt=""><figcaption></figcaption></figure>
 
 If Null is assigned in the Focus Object Property, Focal distance will be computed automatically.
 
@@ -69,13 +77,52 @@ When Use Camera DOF Properties is on, then Focal Distance and Focal Range will b
 
 To increase a quality of DOF, try to insrease values for Samples and Rings
 
-## Lens Flare
+### Lens Flare
 
-PosX and PosY are percent of screen size (width and height)
+You can apply effect for any amount of 3d lights in the scene from their world positions.
+
+<figure><img src="../../../.gitbook/assets/lensflare_image.jpg" alt=""><figcaption></figcaption></figure>
+
+If you don't use Flare Light list, then manually define PosX and PosY which are percent of screen size (width and height)
+
+Flare Light is list of 3d scene lights where every world space position of a light is going to be converted into screen space position and lens flare effect is applied.
+
+<figure><img src="../../../.gitbook/assets/lensflare_properties.jpg" alt=""><figcaption></figcaption></figure>
+
+Flare Use Occlusion and Flare Occlusion Objects defines the process of render 3d scene models into special mask that is going to cover the 2d effect of lens flare.
 
 ## Post Effects and HUD
 
 The post effects modify the final image, where HUD elements are draw as part of it. In order to recover original HUD, the post process plugin has special feature to emulate the HUD drawing on top of post processed image. That is not a full 100% replication of MotionBuilder HUD system, but it covers most of needs with printing out text, rectangles.
+
+## Masking
+
+There are 4 masks supported per each post process. A special FX Masking shader can be used to define what models are going on which mask.&#x20;
+
+<figure><img src="../../../.gitbook/assets/post_process_mask_options (1).jpg" alt=""><figcaption></figcaption></figure>
+
+In post processing we could define a global mask use, that means that we are going to mask out the whole post processing image. Or we could apply masking per effect, as every effect has option "Use Masking" and "Masking Channel"
+
+Debug Display Masking option can be used to visualize a rendered mask in the viewport. With white color we should have objects that are rendered inside the mask.
+
+### FX Masking shader
+
+The shader to append on the model (don't use it as a main shader). It gives a hint to post processing to render connected models to a specific mask texture.
+
+In the properties of the shader you can define on which mask texture the model is going to be rendered.
+
+<figure><img src="../../../.gitbook/assets/fxmasking_properties.jpg" alt=""><figcaption></figcaption></figure>
+
+### Masking Properties
+
+<figure><img src="../../../.gitbook/assets/post_process_mask_options2.jpg" alt=""><figcaption></figcaption></figure>
+
+* Invert Mask - inverse white/black on the rendered mask&#x20;
+* Blur Mask - apply a guassian blur on the mask texture where Blur Mask Scale controls the amplification of a blur&#x20;
+* Use Rim and Rim Power - That is useful especially when geometry is rounded and could add additional feather effect of a mask. Could be used together with mask blur.&#x20;
+* Mask Mix With - This is an operation to subtract one mask from another. For example, if you have a  haze effect rendered with masked displacement and you want to make an occlusion of such effect from a foreground objects in the scene. You can render haze generator object into MaskA, occlusion models into MaskB and then define MaskA to Mix with MaskB.
+
+
 
 ## Additional features of the plugin
 
