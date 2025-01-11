@@ -122,7 +122,7 @@ In the properties of the shader you can define on which mask texture the model i
 * Use Rim and Rim Power - That is useful especially when geometry is rounded and could add additional feather effect of a mask. Could be used together with mask blur.&#x20;
 * Mask Mix With - This is an operation to subtract one mask from another. For example, if you have a  haze effect rendered with masked displacement and you want to make an occlusion of such effect from a foreground objects in the scene. You can render haze generator object into MaskA, occlusion models into MaskB and then define MaskA to Mix with MaskB.
 
-
+Mask Mix Test Scene - MB\_Scene/[texture\_flames\_and\_HazeEffectWithOcclusion.fbx](https://github.com/Neill3d/OpenMoBu/blob/master/MB_Scenes/texture_flames_and_HazeEffectWithOcclusion.fbx)
 
 ## Additional features of the plugin
 
