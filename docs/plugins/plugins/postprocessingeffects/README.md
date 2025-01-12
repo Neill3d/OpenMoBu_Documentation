@@ -131,6 +131,7 @@ Mask Mix Test Scene - MB\_Scene/[texture\_flames\_and\_HazeEffectWithOcclusion.f
 
 ## Videos about the plugin:
 
+* [Make of heat distortion effect](https://youtu.be/0GnUXFdWdTY)
 * [Contept of custom effects](https://youtu.be/muRfrkq16Bc)
 * [Concept of masks](https://youtu.be/1jXuYI_jriY)
 * [Introduction Video from a live stream](https://www.youtube.com/watch?v=sgzunIbNcp4\&t=4887s)
