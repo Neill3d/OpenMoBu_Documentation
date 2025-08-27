@@ -1,16 +1,5 @@
 ---
 description: Open Source scripts and plugins for Autodesk MotionBuilder
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: false
-  outline:
-    visible: false
-  pagination:
-    visible: false
 ---
 
 # OpenMoBu documentation

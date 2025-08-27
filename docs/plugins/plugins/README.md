@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Plugins Overview
 
 <figure><img src="../../.gitbook/assets/openmobu_plugins.jpg" alt=""><figcaption></figcaption></figure>

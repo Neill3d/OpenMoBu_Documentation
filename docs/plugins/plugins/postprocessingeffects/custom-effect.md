@@ -22,7 +22,7 @@ New assets
 * Effect Shader
 * list of pre-defined effect shaders like Blur shader
 
-<figure><img src="../../../.gitbook/assets/customeffect_assets.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/customeffects_props.jpg" alt=""><figcaption></figcaption></figure>
 
 
 
