@@ -1,6 +1,6 @@
 # Plugins Overview
 
-<figure><img src="../../.gitbook/assets/openmobu_plugins.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 ## Relation Constraint Boxes
 
