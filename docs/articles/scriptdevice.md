@@ -26,9 +26,9 @@ We will also need a Relation Constraint, which can help to trigger the Python Sc
 
 ## Example
 
-![TetrisGame](../TetrisGame.jpg)
+![TetrisGame](../.gitbook/assets/TetrisGame.jpg)
 
-To start with, here's a simple example. For a more complex example, please refer to the Tetris game, which is available on GitHub in the openmobu repository. [Here is a link to download](../../MB\_Scenes/Tetris.fbx)
+To start with, here's a simple example. For a more complex example, please refer to the Tetris game, which is available on GitHub in the openmobu repository. [Here is a link to download](../../MB_Scenes/Tetris.fbx)
 
 First, I'll demonstrate how the Python Script device evaluation looks. Then, for those interested, I'll show how to create a similar setup from scratch and start using the Python Script device for their own needs.
 

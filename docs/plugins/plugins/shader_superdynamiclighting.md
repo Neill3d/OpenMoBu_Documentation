@@ -23,15 +23,15 @@ To get access to a wider list of texture channels, you have to put checkbox "Adv
 
 The shader is taking in a count texture transformation as well for channels: diffuse, transparency, displacement, specular, reflect and normal map.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Texture transformation in a texture layout</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Texture transformation in a texture layout</p></figcaption></figure>
 
 ### Shader Navigator Layout
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>navigator layout view of super dynamic lighting shader</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>navigator layout view of super dynamic lighting shader</p></figcaption></figure>
 
 ### Shader Properties
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>properties view of super dynamic lighting shader</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>properties view of super dynamic lighting shader</p></figcaption></figure>
 
 | Property              | Value                    | Description                                                                                         |
 | --------------------- | ------------------------ | --------------------------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ Supported specular reflections:
 * Phong (material like plastic)
 *   Anisotropic (material like brushed metal)
 
-    <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>anisotropic specular reflection</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>anisotropic specular reflection</p></figcaption></figure>
 *   Cook Torrance (with a given specular map where R channel describes the roughness, it's a good fit for a skin surface specular reflections)&#x20;
 
     <figure><img src="../../.gitbook/assets/metahuman_face_test2.jpg" alt=""><figcaption></figcaption></figure>
@@ -125,7 +125,7 @@ Then attach these objects into a "Shadow Bounding Box" custom light property
 * **Specular Type** where 0 - Phong, 1 - Anisotropic and 2 - Cook Torrance
 * **RoughnessX** and **RoughnessY** - properties or specular distribution for the anisotropic specular
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 #### Scene light properties
 
@@ -133,7 +133,7 @@ Then attach these objects into a "Shadow Bounding Box" custom light property
 * **Cast Specular On Object** - bool, defines either light have to contribute to a specular term
 * Shadow Bounding Box - list of objects, to define a custom bounding box area for an infinite frustum when we do render objects into a shadow map
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 #### Script to automate properties creation
 
@@ -153,7 +153,7 @@ In additional shader could do a fragment discard on alpha less than 0.5. That co
 
 Material ambient color is used in combination with a defined global ambient color. In case you have black global ambient color, there will be no effect from the material ambient
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Fog in global light settings also has an influence on the shading, so you can use it with Super Dynamic Lighting shader.
 
@@ -171,11 +171,11 @@ Fog in global light settings also has an influence on the shading, so you can us
 
 In order to use MatCap shading you have to import such matcap image and assign it as input for MatCap texture in the shader properties. Plus you have to put "Use MatCap" property to true.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>example on how matcap texture looks like</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>example on how matcap texture looks like</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ## Where to get matcap images ?
 

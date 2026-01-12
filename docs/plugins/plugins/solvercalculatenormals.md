@@ -36,9 +36,9 @@ It does not take into account any smoothing group or hard edge threshold informa
 
 *   Locate a solver in the assets browser in solvers category
 
-    ![assets](../solver_normals_assets.jpg)
+    ![assets](../../.gitbook/assets/solver_normals_assets.jpg)
 * Add solver into the scene
-* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../solver_normals_props.jpg)
+* Assign models to the solver by using a model context menu or solver Affected Models property list. ![props](../../.gitbook/assets/solver_normals_props.jpg)
 
 ### Test Scenes
 

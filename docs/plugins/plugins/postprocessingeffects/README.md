@@ -1,6 +1,6 @@
 # Post Processing Effects
 
-The plugin that applies post effects in your viewport window [![MoPlugs](../../../../Documentation/Images/Bryan_usecase.jpg)](./)
+The plugin that applies post effects in your viewport window [![MoPlugs](../../../.gitbook/assets/Bryan_usecase.jpg)](./)
 
 ## Effects
 
@@ -34,11 +34,11 @@ The effects could be applied only in a camera view.
 
 In order to apply effects, you have to create a post process user object which contains all properties. You can do that from Assets Browser or from the Post Process Tool. In Assets Browser the user object is located in `Assets / Templates / Shading Elements`
 
-The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../../post_process_asset.jpg)
+The use of python tool will be shown in the next topic, let's do that from assets browser. ![PostProcessingTool](../../../.gitbook/assets/post_process_asset.jpg)
 
-Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../../post_process_user_object.jpg)
+Drag'n'drop into your scene, once created you can always locate from Navigate window in User Objects section ![PostProcessingTool](../../../.gitbook/assets/post_process_user_object.jpg)
 
-Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../../post_process_user_object_properties.jpg)
+Switch the view to a camera view (or create a new camera if you don't have any camera in the scene). Select the post process user object and in property view you will get access to its properties to tweak. ![PostProcessingTool](../../../.gitbook/assets/post_process_user_object_properties.jpg)
 
 Here you can active the desired effects and the whole effect system in order to see the result in real-time in the viewport.
 
@@ -58,7 +58,7 @@ Name of a configuration file is `< PC Name >.PostProcessing.txt`
 
 ## Python tool to tweak post effects properties.
 
-PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../../post_process_tool.jpg)
+PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTool](../../../.gitbook/assets/post_process_tool.jpg)
 
 ## Effects Common Notes
 
@@ -153,7 +153,11 @@ All library binaries for windows x64 are included in the project folder.
 
 ## LOG
 
-21.11.2024
+### 05.01.2026
+
+Beta version of a post processing plugin refactoring with a custom user effect support
+
+### 21.11.2024
 
 * added masking functionality
 * lens flare 3d object occlusion

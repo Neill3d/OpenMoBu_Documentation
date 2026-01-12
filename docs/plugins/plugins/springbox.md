@@ -4,15 +4,15 @@ hidden: true
 
 # Spring box
 
-A box for relation constraint ![This is an image](../../plugins/springbox.jpg)
+A box for relation constraint ![This is an image](../../.gitbook/assets/springbox.jpg)
 
 Spring box math based on fundamental formule F = -kx
 
-[A short demo video on Youtube](http://youtu.be/rAToQEmg\_LY)
+[A short demo video on Youtube](http://youtu.be/rAToQEmg_LY)
 
-[Video how to create a smooth follow camera](https://youtu.be/pmAZOUQBYms?si=OQ71FkckdX\_BL8kn)
+[Video how to create a smooth follow camera](https://youtu.be/pmAZOUQBYms?si=OQ71FkckdX_BL8kn)
 
-[Sample scene - test\_springBox.fbx](../../../MB\_Scenes/test\_springBox.fbx)
+[Sample scene - test\_springBox.fbx](../../../MB_Scenes/test_springBox.fbx)
 
 | Parameter  | Description                                                                                                                                                                                                                                                                     | Default Value |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |

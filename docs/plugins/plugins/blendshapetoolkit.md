@@ -2,9 +2,9 @@
 
 Tools for creating corrective blendshapes for Models.
 
-blendshapes tool - manage and animate your mesh blendshapes list ![blendshapes\_tool](../../plugins/tool_blendshape_manager.jpg)
+blendshapes tool - manage and animate your mesh blendshapes list ![blendshapes\_tool](../../.gitbook/assets/tool_blendshape_manager.jpg)
 
-Sculpting brush - modify your mesh ![blendshapes\_sculpt](../../plugins/tool_sculpt_brush.jpg)
+Sculpting brush - modify your mesh ![blendshapes\_sculpt](../../.gitbook/assets/tool_sculpt_brush.jpg)
 
 Internaly:
 
@@ -13,7 +13,7 @@ Internaly:
 
 ## Videos
 
-[Stylus Pen Pressure support](https://youtu.be/\_d8tTWCfXo4?si=iTYQRCAZvvdJNuZQ)
+[Stylus Pen Pressure support](https://youtu.be/_d8tTWCfXo4?si=iTYQRCAZvvdJNuZQ)
 
 ## LOG
 

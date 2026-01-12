@@ -10,7 +10,7 @@ Every texture object is running own render target. In case one of the properties
 
 The texture object for blending two images with advanced number of composite modes and optional masking for the second image
 
-![textureAdvanceBlend](../../plugins/texture_advance_blend.jpg)
+![textureAdvanceBlend](../../.gitbook/assets/texture_advance_blend.jpg)
 
 ### Properties
 
@@ -28,7 +28,7 @@ Sample file - MB\_Scenes\texture\_advance\_blend.fbx
 
 A texture object to player sprite texture animations. This is a plugin that introduced a new texture object to unpack sprite altal into a run-time texture If you want to see the animated effect, you have to put key on BackgroundLayer property
 
-![textureParamBlend2](../../plugins/texture_param_blend_2.jpg) ![textureParamBlend](../../plugins/texture_param_blend.jpg)
+![textureParamBlend2](../../.gitbook/assets/texture_param_blend_2.jpg) ![textureParamBlend](../../.gitbook/assets/texture_param_blend.jpg)
 
 ### Properties
 

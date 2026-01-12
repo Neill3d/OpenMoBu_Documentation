@@ -1,6 +1,6 @@
 # Plugins Overview
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 ## Relation Constraint Boxes
 
@@ -49,7 +49,7 @@ Shading, fx, geometry preparation for rendering
 
 A special user object, that helps to add post process effects on top of your camera view.
 
-[![MoPlugs](../../../Documentation/Images/Bryan_usecase.jpg)](../../)
+[![MoPlugs](../../.gitbook/assets/Bryan_usecase.jpg)](../../)
 
 [Read More...](postprocessingeffects/)
 
@@ -61,7 +61,7 @@ This is an advance version of Dynamic Lighting Shader with features like vertex 
 
 ### Renderer Colors
 
-A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../renderer_colors_normalized.jpg)
+A special renderer that could render your scene with color ids or normalized colors ![RendererColorsNormalized](../../.gitbook/assets/renderer_colors_normalized.jpg)
 
 ### Texture
 
@@ -103,7 +103,7 @@ Tools, custom objects in the scene
 
 ### BlendShape Toolkit
 
-![blendshapeToolkit](../tool_sculpt_brush.jpg)
+![blendshapeToolkit](../../.gitbook/assets/tool_sculpt_brush.jpg)
 
 * Blendshape manager - to manage the given model blendshapes, plus additional functionality to add/remove/duplicate, save/load from file, do a snapshot
 * Blenshape Sculpt - use brushes to create or modify a blendshape. it can be useful for making correction blendshapes on fly, as you can sculpt on top of current deformed mesh and it will generate a correspondent correction blendshape
