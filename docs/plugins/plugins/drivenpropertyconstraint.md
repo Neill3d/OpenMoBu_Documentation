@@ -15,17 +15,17 @@ The main use of this constraint is to transfer the value of a non-animatable pro
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Test Scenes
 
-* [Camera Driven Property Example](../../../MB\_Scenes/constraint\_DrivenProperty\_Camera.fbx)
-* [Curve Path Length Example](../../../MB\_Scenes/DrivenProperty\_CurvePathLength.fbx)
+* [Camera Driven Property Example](../../../MB_Scenes/constraint_DrivenProperty_Camera.fbx)
+* [Curve Path Length Example](../../../MB_Scenes/DrivenProperty_CurvePathLength.fbx)
 
 ### Videos
 
-* [Curve Path Length Example](https://drive.google.com/file/d/1QtuZqPx-RxS-W9v42Tz3nKA\_U8V3rR9x/view?usp=share\_link)
-* [Simple Camera Property Example](https://www.youtube.com/watch?v=jSqzdz\_fkoA)
+* [Curve Path Length Example](https://drive.google.com/file/d/1QtuZqPx-RxS-W9v42Tz3nKA_U8V3rR9x/view?usp=share_link)
+* [Simple Camera Property Example](https://www.youtube.com/watch?v=jSqzdz_fkoA)
 
 ### Log
 

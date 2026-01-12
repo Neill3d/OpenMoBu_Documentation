@@ -109,11 +109,11 @@ Infinite light shadow uses the whole scene bounding box as a default frustum are
 
 There is a way to define a custom bounding box for a shadow rendering. To do so you have to define an object or set of objects which bounding box you would like to use.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>example of infinite light shadow bounding box</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>example of infinite light shadow bounding box</p></figcaption></figure>
 
 Then attach these objects into a "Shadow Bounding Box" custom light property
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>custom object property and defined model to be used as bounding box area for shadow</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>custom object property and defined model to be used as bounding box area for shadow</p></figcaption></figure>
 
 
 

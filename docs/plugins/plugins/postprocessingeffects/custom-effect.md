@@ -3,6 +3,8 @@
 {% hint style="warning" %}
 Work in progress, the feature is not part of main branch!
 
+You can download binaries with the test version of the feature in the release page of the openmobu repository
+
 [Concept of custom effect video](https://youtu.be/muRfrkq16Bc)
 {% endhint %}
 
@@ -18,13 +20,10 @@ Below you can find a topic on how to adapt a shadertoy shader
 
 New assets
 
-* Post Effect&#x20;
 * Effect Shader
-* list of pre-defined effect shaders like Blur shader
+* pre-defined effect shaders: Blur Shader and Mix Shader
 
-<figure><img src="../../../.gitbook/assets/customeffects_props.jpg" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Examples
 
@@ -53,6 +52,7 @@ You can find example scenes in the openmobu repositiory / MB\_Scenes folder
 | lowerClip          | uniform float lowerClip;              | this is a lower clip image level. defined in a texture coord space to skip processing                                                                                                                                                                        |
 | gResolution        | uniform vec2 gResolution;             | vec2 that contains processing absolute resolution, like 1920x1080                                                                                                                                                                                            |
 | iResolution        |                                       | same as gResolution                                                                                                                                                                                                                                          |
+| uInvResolution     | uniform vec2 uInvResolution;          | 1.0 / iResolution.xy                                                                                                                                                                                                                                         |
 | texelSize          | uniform vec2 texelSize;               | vec2 of a texel size, computed as 1/resolution                                                                                                                                                                                                               |
 | iTime              | uniform float iTime;                  | compatible with shadertoy, float, shader playback time (in seconds)                                                                                                                                                                                          |
 | iDate              | uniform vec4 iDate;                   | compatible with shadertoy, vec4, (year, month, day, time in seconds)                                                                                                                                                                                         |
@@ -60,6 +60,10 @@ You can find example scenes in the openmobu repositiory / MB\_Scenes folder
 | modelView          | uniform mat4 modelView;               | current camera modelview matrix                                                                                                                                                                                                                              |
 | projection         | uniform mat4 projection;              | current camera projection matrix                                                                                                                                                                                                                             |
 | modelViewProj      | uniform mat4 modelViewProj;           | current camera modelview-projection matrix                                                                                                                                                                                                                   |
+| invModelViewProj   |                                       |                                                                                                                                                                                                                                                              |
+| prevModelViewProj  |                                       | modelview-projection matrix from a previous frame (used in motion blur)                                                                                                                                                                                      |
+| zNear              |                                       | camera near plane                                                                                                                                                                                                                                            |
+| zFar               |                                       | camera far plane                                                                                                                                                                                                                                             |
 
 
 
@@ -82,6 +86,16 @@ There is a way to customize the ui elements based on a given special postfix to 
 
 
 ### Shadertoy shaders and adaptation for a custom effect
+
+#### ShaderToy compatibility mode
+
+<figure><img src="../../../.gitbook/assets/Снимок экрана_20260111_132017.png" alt=""><figcaption></figcaption></figure>
+
+Turn on the correspondent flag in your user effect shader object to make a header and footer to support a code from shader toy effect.
+
+
+
+#### Steps to manually adjust your shader
 
 First of all, we have to add a header information about shader version and input, output values. In our case the input value is vec2 TexCoord which represents a processed texel position in uv space \[0; 1] and output is vec4 FragColor which is our computed texel color.
 
@@ -118,7 +132,7 @@ where iResolution is system uniform that have to be defined in the top of the sh
 uniform vec2 iResolution;
 ```
 
-For shaders that require buffers, you need to create each buffer as a separate GLSL fragment shader and use them to compose an effect shader. Then, connect these shaders together in the execution chain. When you have a `sampler2D` uniform, it will be exposed as a list object property in MotionBuilder, allowing another shader to be used to compute that input.
+For shaders that require buffers, you need to create each buffer as a separate GLSL fragment shader and use them to compose an effect shader. Then, connect these shaders together in the execution chain. When you have a `sampler2D` uniform, it will be exposed as a list object property in MotionBuilder, allowing another shader or texture to be used to compute that input.
 
 
 
