@@ -128,6 +128,9 @@ Mask Mix Test Scene - MB\_Scene/[texture\_flames\_and\_HazeEffectWithOcclusion.f
 
 * stream view image via UDP socket (used for virtual camera communication), was designed for a Google Tango tablet - [Introduction To Virtual Camera](https://www.youtube.com/watch?v=WpLeU2rrf_Y)
 * trigger evaluation of Python Script devices during rendering. That feature is always enabled and it helps to trigger Embedded Python Scripts while running an offline rendering.
+* video clips time warping. Video clip should have properties: VideoTimeWrap(animatable number), vtwLast (int), vtwStep (int), vtwEnable (bool)
+  * vtwEnable is activating the effect where VideoTimeWrap property should contain the curve to timewarp the frame of a image sequence to display
+  * the feature is on by default and controlled by the @PATCHES.txt config file with option Video Clip Timewrap
 
 ## Videos about the plugin:
 
