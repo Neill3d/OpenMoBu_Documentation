@@ -14,7 +14,7 @@ This is a standard effect and its properties you can find in the post processing
 
 &#x20;
 
-#### Focus Control
+### Focus Control
 
 You can control the focal plane in several ways:
 
@@ -27,7 +27,7 @@ You can control the focal plane in several ways:
   * _Focal Distance_ is derived from the camera focus system (including Interest or Focus Model).
   * _Focal Range_ is taken from the camera and acts as a focus softness / in-focus band width.
 
-#### Blur Behaviour
+### Blur Behaviour
 
 * Pixels at the focal distance remain sharp.
 * Blur increases progressively for pixels in front of and behind the focal plane.
@@ -35,7 +35,7 @@ You can control the focal plane in several ways:
 * **Foreground Blur Toggle**\
   You can disable foreground blur (objects closer than the focal plane) if needed.
 
-#### Optical Controls
+### Optical Controls
 
 Although the effect is artist-friendly and not strictly physically-based, it incorporates familiar lens parameters:
 
@@ -52,7 +52,7 @@ Although the effect is artist-friendly and not strictly physically-based, it inc
   * Larger values → wider sharp region
   * Smaller values → shallower depth of field
 
-#### Bokeh and Sampling
+### Bokeh and Sampling
 
 * The blur is computed using a multi-ring sampling kernel.
 * **Samples** and **Rings** control quality:
@@ -64,7 +64,7 @@ Recommended starting point:
 * `Samples ≥ 4`
 * `Rings ≥ 4`&#x20;
 
-#### Bokeh Shape (Pentagon)
+### Bokeh Shape (Pentagon)
 
 * Optional pentagonal aperture simulation is supported.
 * When enabled:
@@ -79,7 +79,7 @@ Notes:
   * specular reflections
 * Subtle on flat or low-contrast surfaces
 
-#### Debug Options
+### Debug Options
 
 * **Debug Blur Value**\
   Displays the computed blur factor as grayscale.
