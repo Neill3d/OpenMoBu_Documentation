@@ -10,17 +10,17 @@ Here is an original test scene, that I'm going to apply build-in effects one by 
 
 
 
-| Effect                                | image                                                                 | Description                                                                                                                                                             |
-| ------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color Correction                      | ![](../../../.gitbook/assets/effects_colorcorrection_with_effect.jpg) | <ul><li>Tweak image contrast, brightness, gamma </li><li>Invert the image colors</li><li>Hue and saturation</li><li>Chromatic abberation</li><li>Bloom effect</li></ul> |
-| Displacement                          | ![](../../../.gitbook/assets/effects_displacement_with_effect.jpg)    | an animated wave distortion effect                                                                                                                                      |
-| Depth of Field (DOF)                  | ![](../../../.gitbook/assets/effects_dof_with_effect.jpg)             | A depth of field effect                                                                                                                                                 |
-| Film Grain                            | ![](../../../.gitbook/assets/effects_filmgrain_with_effect.jpg)       | Animated film grain effect                                                                                                                                              |
-| Fish Eye                              | ![](../../../.gitbook/assets/effects_fisheye_with_effect.jpg)         | Fish eye distortion of the image                                                                                                                                        |
-| Lens Flare                            | ![](../../../.gitbook/assets/effects_lensflare_with_effect.jpg)       | Lens flare with a possibility to connect 3d scene lights as a source position for the effect. There is an additional feature of 3d occlusion for the effect.            |
-| Motion Blur (Camera)                  | ![](../../../.gitbook/assets/effects_motionblur_with_effect.jpg)      | Based on previous and current camera transforms, blur based on a camera movement                                                                                        |
-| Screen Space Ambient Occlusion (SSAO) | ![](../../../.gitbook/assets/effects_ssao_with_effect.jpg)            | micro shadowing                                                                                                                                                         |
-| Vignetting                            | ![](../../../.gitbook/assets/effects_vigneting_with_effect.jpg)       | a vignetting effect                                                                                                                                                     |
+| Effect                                           | image                                                                 | Description                                                                                                                                                             |
+| ------------------------------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Color Correction                                 | ![](../../../.gitbook/assets/effects_colorcorrection_with_effect.jpg) | <ul><li>Tweak image contrast, brightness, gamma </li><li>Invert the image colors</li><li>Hue and saturation</li><li>Chromatic abberation</li><li>Bloom effect</li></ul> |
+| Displacement                                     | ![](../../../.gitbook/assets/effects_displacement_with_effect.jpg)    | an animated wave distortion effect                                                                                                                                      |
+| [Depth of Field (DOF)](depth-of-field-effect.md) | ![](../../../.gitbook/assets/effects_dof_with_effect.jpg)             | A depth of field effect                                                                                                                                                 |
+| Film Grain                                       | ![](../../../.gitbook/assets/effects_filmgrain_with_effect.jpg)       | Animated film grain effect                                                                                                                                              |
+| Fish Eye                                         | ![](../../../.gitbook/assets/effects_fisheye_with_effect.jpg)         | Fish eye distortion of the image                                                                                                                                        |
+| Lens Flare                                       | ![](../../../.gitbook/assets/effects_lensflare_with_effect.jpg)       | Lens flare with a possibility to connect 3d scene lights as a source position for the effect. There is an additional feature of 3d occlusion for the effect.            |
+| Motion Blur (Camera)                             | ![](../../../.gitbook/assets/effects_motionblur_with_effect.jpg)      | Based on previous and current camera transforms, blur based on a camera movement                                                                                        |
+| Screen Space Ambient Occlusion (SSAO)            | ![](../../../.gitbook/assets/effects_ssao_with_effect.jpg)            | micro shadowing                                                                                                                                                         |
+| Vignetting                                       | ![](../../../.gitbook/assets/effects_vigneting_with_effect.jpg)       | a vignetting effect                                                                                                                                                     |
 
 {% content-ref url="custom-effect.md" %}
 [custom-effect.md](custom-effect.md)
@@ -65,17 +65,7 @@ PostProcessingTool.py - you can find in PythonScripts/Startup ![PostProcessingTo
 * DOF and SSAO and any other effect which is using depth buffer could be sensible to camera near/far planes
 * GLSL Shader stores value in single float precision, so please take care about too big values for the camera far plane
 
-### DOF
 
-In DOF Effect you can manually specify a focal distance.
-
-<figure><img src="../../../.gitbook/assets/dof_properties.jpg" alt=""><figcaption></figcaption></figure>
-
-If Null is assigned in the Focus Object Property, Focal distance will be computed automatically.
-
-When Use Camera DOF Properties is on, then Focal Distance and Focal Range will be taken from Camera Real-Time effects
-
-To increase a quality of DOF, try to insrease values for Samples and Rings
 
 ### Lens Flare
 

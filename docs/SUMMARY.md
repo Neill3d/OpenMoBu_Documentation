@@ -16,6 +16,7 @@
 * [Plugins Overview](plugins/plugins/README.md)
   * [GPU Particles Shader](plugins/plugins/gpuparticlesshader.md)
   * [Post Processing Effects](plugins/plugins/postprocessingeffects/README.md)
+    * [Depth of Field Effect](plugins/plugins/postprocessingeffects/depth-of-field-effect.md)
     * [Custom Effect](plugins/plugins/postprocessingeffects/custom-effect.md)
   * [References Manager](plugins/plugins/referencesmanager.md)
   * [Spring box](plugins/plugins/springbox.md)
