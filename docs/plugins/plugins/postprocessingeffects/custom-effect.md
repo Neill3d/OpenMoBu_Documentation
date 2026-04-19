@@ -18,14 +18,14 @@ Below you can find a topic on how to adapt a shadertoy shader
 
 
 
-New assets
+## Assets
 
 * User Effect
 * pre-defined effects: Blur Shader and Mix Shader
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-#### User Effect
+### User Effect
 
 In a user effect, you can define a shader file as a fragment GLSL shader to process the full-screen image. The file path can be specified relative to the folder where the scene is saved, or relative to the plugins folder. For example, _GLSL/simple130.glslv_ is a file distributed with the plugins as a default vertex shader, and in most cases it should be left unchanged.
 
@@ -37,7 +37,7 @@ In a user effect, you can define a shader file as a fragment GLSL shader to proc
 
 **Resolution** can be used to downsample the processed image. For certain effects, such as blur, processing the full-resolution image is unnecessary; using a reduced resolution (e.g., half size) is often sufficient and more efficient.
 
-#### Blur Effect
+### Blur Effect
 
 <figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
@@ -47,7 +47,7 @@ This is a built-in custom effect that can be part of a custom effects processing
 
 **Blur Scale** – Defines the scale factor of the applied blur.
 
-#### Mix Effect
+### Mix Effect
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
@@ -75,7 +75,7 @@ You can find example scenes in the openmobu repositiory / MB\_Scenes folder
 
 
 
-### Uniforms
+## Uniforms
 
 A GLSL shader contains **uniforms** that define inputs provided either by the user or by the system (via predefined uniform names). These uniforms are parsed into a shader scheme, and the corresponding object properties are created automatically.
 
@@ -85,7 +85,7 @@ For `sampler2D` uniforms, which represent bound textures, an object list propert
 * **Attach a scene texture** – the video/image from that texture will be bound as the input to the shader.
 * **Attach another effect object** – the result of that effect’s processing will be used as the input texture for the shader.
 
-#### System Uniforms
+### System Uniforms
 
 | name               | declaration                           | description                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -115,7 +115,7 @@ For `sampler2D` uniforms, which represent bound textures, an object list propert
 
 
 
-#### Uniform Special Postfix
+### Uniform Naming Rules
 
 During compilation the shader effect is going to pick the system uniforms and user uniforms. For user uniforms is going to make object properties, so that user could customize the input values for the shader render.
 
@@ -133,9 +133,9 @@ There is a way to customize the ui elements based on a given special postfix to 
 
 
 
-### Shadertoy shaders and adaptation for a custom effect
+## Shadertoy shaders and adaptation for a custom effect
 
-#### ShaderToy compatibility mode
+### ShaderToy compatibility mode
 
 <figure><img src="../../../.gitbook/assets/Снимок экрана_20260111_132017.png" alt=""><figcaption></figcaption></figure>
 
@@ -143,7 +143,7 @@ Turn on the correspondent flag in your user effect shader object to make a heade
 
 
 
-#### Steps to manually adjust your shader
+### Steps to manually adjust your shader
 
 First of all, we have to add a header information about shader version and input, output values. In our case the input value is vec2 TexCoord which represents a processed texel position in uv space \[0; 1] and output is vec4 FragColor which is our computed texel color.
 
