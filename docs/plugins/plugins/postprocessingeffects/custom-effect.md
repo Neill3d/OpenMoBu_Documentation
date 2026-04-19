@@ -75,9 +75,17 @@ You can find example scenes in the openmobu repositiory / MB\_Scenes folder
 
 
 
+### Uniforms
 
+A GLSL shader contains **uniforms** that define inputs provided either by the user or by the system (via predefined uniform names). These uniforms are parsed into a shader scheme, and the corresponding object properties are created automatically.
 
-### System Uniforms
+For `sampler2D` uniforms, which represent bound textures, an object list property is exposed. There are several ways to define the input texture:
+
+* **Leave it empty** – the texture from the previously processed effect in the post-processing chain will be used. For this purpose, you can use predefined system names such as `inputSampler` or `iChannel0`.
+* **Attach a scene texture** – the video/image from that texture will be bound as the input to the shader.
+* **Attach another effect object** – the result of that effect’s processing will be used as the input texture for the shader.
+
+#### System Uniforms
 
 | name               | declaration                           | description                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -107,7 +115,7 @@ You can find example scenes in the openmobu repositiory / MB\_Scenes folder
 
 
 
-### Uniform Special Postfix
+#### Uniform Special Postfix
 
 During compilation the shader effect is going to pick the system uniforms and user uniforms. For user uniforms is going to make object properties, so that user could customize the input values for the shader render.
 
