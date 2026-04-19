@@ -20,10 +20,50 @@ Below you can find a topic on how to adapt a shadertoy shader
 
 New assets
 
-* Effect Shader
-* pre-defined effect shaders: Blur Shader and Mix Shader
+* User Effect
+* pre-defined effects: Blur Shader and Mix Shader
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+#### User Effect
+
+In a user effect, you can define a shader file as a fragment GLSL shader to process the full-screen image. The file path can be specified relative to the folder where the scene is saved, or relative to the plugins folder. For example, _GLSL/simple130.glslv_ is a file distributed with the plugins as a default vertex shader, and in most cases it should be left unchanged.
+
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
+**Export Shader Scheme** is a debug option that processes the shader and outputs its uniforms to a text file in json format.
+
+**Number of Passes** defines how many times the image is processed using the provided shader. On each iteration, a system uniform `iPass` represents the current iteration index.
+
+**Resolution** can be used to downsample the processed image. For certain effects, such as blur, processing the full-resolution image is unnecessary; using a reduced resolution (e.g., half size) is often sufficient and more efficient.
+
+#### Blur Effect
+
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+
+This is a built-in custom effect that can be part of a custom effects processing chain. It provides several additional options:
+
+**Input Texture** – If left empty, the full-screen image from the previous effect is used. If a scene texture is specified, the video from that texture is used as the input. If you assign another effect or custom effect object here, it will be used as the input for this blur effect, forming a processing chain. The input effect (and any of its dependencies) is processed first, followed by the current effect.
+
+**Blur Scale** – Defines the scale factor of the applied blur.
+
+#### Mix Effect
+
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+This effect is used to mix two input images. It provides two input parameters: **Input Texture** and **Second Texture**.
+
+For each input, you can specify:
+
+* **Empty** – uses the previous texture from the post-processing chain
+* **Scene texture** – uses a video/image texture as input
+* **Another effect** – uses the result of a processed effect as input for that channel
+
+**Bloom** is an optional mode, and **Inverse** modifies how the two images are combined.
+
+By default, the two textures are combined using multiplication. When **Inverse** is enabled, the result is computed by multiplying the inverse of the first texture with the second texture.
+
+When **Bloom** is enabled, the mixing changes to an additive model: the first texture is multiplied by a bloom tone, and the second texture is multiplied by a bloom stretch, and the results are then added together.
 
 ### Examples
 
